@@ -52,10 +52,10 @@ transformed parameters {
   vector<lower=0>[S] sigma_beta_raw;   // raw item variance
 
   array[N, J] simplex[5] p_cat;              // response category probabilities
-  real<lower=0, upper=1> middle[N,J];  // item-person probability to select middle category
-  real<lower=0, upper=1> extreme[N,J]; // item-person probability to respond extremely
-  real<lower=0, upper=1> acquies[N,J]; // item-person probability for acquiescence
-  real<lower=0, upper=1> trait[N,J];   // item-person probability to respond positive/negative
+  array[N, J] real<lower=0, upper=1> middle;   // item-person probability to select middle category
+  array[N, J] real<lower=0, upper=1> extreme;  // item-person probability to respond extremely
+  array[N, J] real<lower=0, upper=1> acquies;  // item-person probability for acquiescence
+  array[N, J] real<lower=0, upper=1> trait;  // item-person probability to respond positive/negative
   real<lower=0, upper=1> extreme_a[N]; // latent overall level of extremity after ARS
   
 // scaling of variance
