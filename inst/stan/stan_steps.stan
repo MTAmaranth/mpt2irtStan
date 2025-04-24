@@ -63,10 +63,10 @@ transformed parameters {
     vector<lower=0>[S*4] sigma_beta_raw;   // raw item variance
     
     array[N, J] simplex[5] p_cat;              // response category probabilities
-    real<lower=0, upper=1> node1[N,J];   // item-person probability for 1st node
-    real<lower=0, upper=1> node2[N,J];   // item-person probability for 2nd node
-    real<lower=0, upper=1> node3[N,J];   // item-person probability for 3rd node
-    real<lower=0, upper=1> node4[N,J];   // item-person probability for 4th node
+    array[N, J] real<lower=0, upper=1> node1;   // item-person probability for 1st node
+    array[N, J] real<lower=0, upper=1> node2;   // item-person probability for 2nd node
+    array[N, J] real<lower=0, upper=1> node3;   // item-person probability for 3rd node
+    array[N, J] real<lower=0, upper=1> node4;   // item-person probability for 4th node
 
     // scaling of variance
     if (S == 1) {
