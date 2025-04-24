@@ -64,7 +64,7 @@ transformed parameters {
   array[N, J] real<lower=0, upper=1> extreme;  // item-person probability to respond extremely
   array[N, J] real<lower=0, upper=1> acquies;  // item-person probability for acquiescence
   array[N, J] real<lower=0, upper=1> trait;  // item-person probability to respond positive/negative
-  real<lower=0, upper=1> extreme_a[N]; // latent overall level of extremity after ARS
+  array[N] real<lower=0, upper=1> extreme_a; // latent overall level of extremity after ARS
   
 // scaling of variance
 Sigma = diag_matrix(xi_theta) * Sigma_raw* diag_matrix(xi_theta);
