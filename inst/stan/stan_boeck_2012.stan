@@ -143,7 +143,7 @@ for(i in 1:N){
 
 // ----- posterior predictive
 generated quantities {
-    int<lower=1, upper=5> X_pred[N2, J];	    // predicted responses of partipants
+    array[N2, J] int<lower=1, upper=5> X_pred;	    // predicted responses of partipants
     
     // matrix[N,J] dev_obs;
     // matrix[N,J] dev_pred;
