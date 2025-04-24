@@ -51,7 +51,7 @@ transformed parameters {
   matrix[J, 4] beta;     			   // item difficulties
   vector<lower=0>[S] sigma_beta_raw;   // raw item variance
 
-  simplex[5] p_cat[N, J];              // response category probabilities
+  array[N, J] simplex[5] p_cat;              // response category probabilities
   real<lower=0, upper=1> middle[N,J];  // item-person probability to select middle category
   real<lower=0, upper=1> extreme[N,J]; // item-person probability to respond extremely
   real<lower=0, upper=1> acquies[N,J]; // item-person probability for acquiescence
