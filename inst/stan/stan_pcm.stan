@@ -49,7 +49,7 @@ data {
 // ----------------------------------------
 parameters {
     // person parameters
-    vector[S] theta_raw[N];                      // unscaled latent trait values
+    array[N] vector[S] theta_raw;                      // unscaled latent trait values
     vector<lower=0, upper=100>[S] xi_theta;      // scaling parameters
     cov_matrix[S] Sigma_raw;                     // unscaled covariance matrix of traits
     
