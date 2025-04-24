@@ -155,7 +155,7 @@ generated quantities {
 	// vector<lower=0>[S*4] sigma_beta;	        // item SD
 	matrix<lower=0>[S,4] sigma_beta;	        // item SD
 	matrix[S,4] mu_beta;	                    // item SD
-    int<lower=1, upper=5> X_pred[N2, J];	    // predicted responses of partipants
+    array[N2, J] int<lower=1, upper=5> X_pred;	    // predicted responses of partipants
     
     Corr = diag_matrix(inv_sqrt(diagonal(Sigma))) * Sigma * diag_matrix(inv_sqrt(diagonal(Sigma)));
     
