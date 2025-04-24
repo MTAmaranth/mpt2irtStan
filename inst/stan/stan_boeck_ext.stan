@@ -17,8 +17,8 @@ data {
 	int<lower=1> J;  					 // number of items
 	array[N, J] int<lower=1, upper=5> X;	     // chosen responses of partipants
 	int<lower=1> S;						 // number of theta-parameters (2012-version: S=3
-	int<lower=0, upper=1> revItem[J];    // index for reversed items (=1)
-	int<lower=1> traitItem[J];   		 // index for trait items (1,...,n.trait)
+	array[J] int<lower=0, upper=1> revItem;   // index for reversed items (=1)
+	array[J] int<lower=1> traitItem;   		// index for trait items (1,...,n.trait)
 	// real<lower=0> T1_CONST;              // constant added to mean-expected frequencies of zero
 	int<lower=1> N2;  					 // number of persons for whom to draw posterior predictives
 	
