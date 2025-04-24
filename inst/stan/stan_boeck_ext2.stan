@@ -152,7 +152,7 @@ model {
 
 // ----- posterior predictive
 generated quantities {
-    int<lower=1, upper=5> X_pred[N2, J];	  // predicted responses of partipants
+    array[N2, J] int<lower=1, upper=5> X_pred;	  // predicted responses of partipants
     
     // int<lower=1, upper=5> ZX_pred[J];	  // predicted responses of theta=0
     // simplex[5] Zp_cat[J];
