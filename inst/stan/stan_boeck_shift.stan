@@ -135,7 +135,7 @@ model {
 }
 
 generated quantities {
-    int<lower=1, upper=5> X_pred[N2, J];	  // predicted responses of partipants
+    array[N2, J] int<lower=1, upper=5> X_pred;	  // predicted responses of partipants
     
 	vector<lower=0>[S-1] sigma_beta;	      // item SD
 	
