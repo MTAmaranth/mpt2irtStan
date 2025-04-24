@@ -70,7 +70,7 @@ transformed parameters {
     // vector<lower=0>[S] sigma_beta_raw;   // raw item variance
     vector<lower=0>[S*4] sigma_beta_raw; // raw item variance
     
-    simplex[5] p_cat[N, J];              // response category probabilities
+    array[N, J] simplex[5] p_cat;              // response category probabilities
   
     // scaling of variance
     if (S == 1) {
