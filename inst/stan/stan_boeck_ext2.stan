@@ -52,11 +52,11 @@ transformed parameters {
     matrix[J, 5] beta;     			       // item difficulties
     vector<lower=0>[S+1] sigma_beta_raw;   // raw item variance
     array[N, J] simplex[5] p_cat;               // response category probabilities
-    real<lower=0, upper=1> middle[N,J];    // item-person probability to select middle category
-    real<lower=0, upper=1> extreme[N,J];   // item-person probability to respond extremely
-    real<lower=0, upper=1> acquies[N,J];   // item-person probability for acquiescence
-    real<lower=0, upper=1> trait[N,J];     // item-person probability to respond positive/negative
-    real<lower=0, upper=1> extreme_a[N,J]; // latent overall level of extremity after ARS
+    array[N, J] real<lower=0, upper=1> middle;   // item-person probability to select middle category
+    array[N, J] real<lower=0, upper=1> extreme;  // item-person probability to respond extremely
+    array[N, J] real<lower=0, upper=1> acquies;  // item-person probability for acquiescence
+    array[N, J] real<lower=0, upper=1> trait;  // item-person probability to respond positive/negative
+    array[N, J] real<lower=0, upper=1> extreme_a;  // latent overall level of extremity after ARS
     
     // scaling of variance
     Sigma = diag_matrix(xi_theta) * Sigma_raw* diag_matrix(xi_theta);
