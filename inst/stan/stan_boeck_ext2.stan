@@ -16,7 +16,7 @@ data {
 	// data and indices
 	int<lower=1> N;  					 // number of persons
 	int<lower=1> J;  					 // number of items
-	int<lower=1, upper=5> X[N, J];	     // chosen responses of partipants
+	array[N, J] int<lower=1, upper=5> X;	     // chosen responses of partipants
 	int<lower=1> S;						 // number of theta-parameters (2012-version: S=3
 	int<lower=0, upper=1> revItem[J];    // index for reversed items (=1)
 	int<lower=1> traitItem[J];   		 // index for trait items (1,...,n.trait)
