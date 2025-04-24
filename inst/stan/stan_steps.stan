@@ -62,7 +62,7 @@ transformed parameters {
     // vector<lower=0>[S] sigma_beta_raw;   // raw item variance
     vector<lower=0>[S*4] sigma_beta_raw;   // raw item variance
     
-    simplex[5] p_cat[N, J];              // response category probabilities
+    array[N, J] simplex[5] p_cat;              // response category probabilities
     real<lower=0, upper=1> node1[N,J];   // item-person probability for 1st node
     real<lower=0, upper=1> node2[N,J];   // item-person probability for 2nd node
     real<lower=0, upper=1> node3[N,J];   // item-person probability for 3rd node
